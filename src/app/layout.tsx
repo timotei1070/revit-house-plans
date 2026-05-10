@@ -12,7 +12,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://timotei1070.github.io/revit-house-plans";
+const OG_IMAGE = `${SITE_URL}/og-image.png`;
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Timotei Blindu — Dessinateur en construction & aide chantier · Bruxelles",
   description:
     "Étudiant dessinateur en construction (Lycée la Retraite, Bruxelles). Plans 2D, métrés, aide chantier et rénovation à Anderlecht et Bruxelles. Devis gratuit.",
@@ -29,6 +33,22 @@ export const metadata: Metadata = {
       "Plans 2D, métrés, aide chantier. Étudiant sérieux, ponctuel, disponible weekend et vacances scolaires.",
     locale: "fr_BE",
     type: "website",
+    url: SITE_URL,
+    siteName: "Timotei Blindu",
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Timotei Blindu — Dessinateur en construction & aide chantier Bruxelles",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Timotei Blindu — Dessinateur & aide construction Bruxelles",
+    description: "Plans 2D, métrés, aide chantier. Bruxelles & périphérie.",
+    images: [OG_IMAGE],
   },
 };
 
