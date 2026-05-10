@@ -30,6 +30,9 @@ const PHONE_DISPLAY = "0486 59 16 15";
 const WHATSAPP = "32486591615";
 const EMAIL = "tblindu8271@gmail.com";
 
+const BASE_PATH = process.env.NODE_ENV === "production" ? "/revit-house-plans" : "";
+const asset = (p: string) => `${BASE_PATH}${p}`;
+
 const services = [
   {
     icon: PencilRuler,
@@ -167,7 +170,7 @@ function Hero() {
           <div className="rounded-xl border border-border bg-card p-2 shadow-xl shadow-primary/5">
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-muted">
               <Image
-                src="/portfolio/plan-A101-1.png"
+                src={asset("/portfolio/plan-A101-1.png")}
                 alt="Exemple de plan d'architecture rez-de-chaussée"
                 fill
                 className="object-contain"
@@ -243,7 +246,7 @@ function Realisations() {
             <figure key={p.code} className="group overflow-hidden rounded-xl border border-border bg-card transition hover:shadow-lg">
               <div className="relative aspect-[4/3] overflow-hidden bg-white">
                 <Image
-                  src={`/portfolio/${p.file}`}
+                  src={asset(`/portfolio/${p.file}`)}
                   alt={p.title}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
