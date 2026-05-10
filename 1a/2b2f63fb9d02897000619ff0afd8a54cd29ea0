@@ -1,0 +1,25 @@
+.github/workflows/deploy.yml
+  s_b8eae813f83524::t_1721999f3bbf54 1-54
+next.config.ts
+  s_b8eae813f83524::t_fd757223b50fc3 3-5,7-11
+src/app/page.tsx
+  s_b8eae813f83524::t_c1324363f370ff 173
+  s_b8eae813f83524::t_3e342fb95c97b6 249
+  s_b8eae813f83524::t_ded6da46940a30 33-35
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "1a2b2f63fb9d02897000619ff0afd8a54cd29ea0",
+  "prompts": {},
+  "sessions": {
+    "s_b8eae813f83524": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "628b087d-7b0c-4b41-bafa-a5aa87adce87",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "xFlaviews <flaviusmironcatalin@gmail.com>"
+    }
+  }
+}
