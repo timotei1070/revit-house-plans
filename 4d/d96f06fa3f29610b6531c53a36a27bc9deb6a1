@@ -1,0 +1,24 @@
+src/app/projets/page.tsx
+  s_b8eae813f83524::t_2cf7ef496480cc 1-110
+src/app/page.tsx
+  s_b8eae813f83524::t_ca422a6f10a360 113
+  s_b8eae813f83524::t_3ec1fa1504e70c 236,241-243,245-275,277-297
+src/app/projets/projet-franciuc/page.tsx
+  s_b8eae813f83524::t_89fde2faf9449b 1-210
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "4dd96f06fa3f29610b6531c53a36a27bc9deb6a1",
+  "prompts": {},
+  "sessions": {
+    "s_b8eae813f83524": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "628b087d-7b0c-4b41-bafa-a5aa87adce87",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "xFlaviews <flaviusmironcatalin@gmail.com>"
+    }
+  }
+}
