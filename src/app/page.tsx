@@ -110,7 +110,7 @@ function Header() {
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           <a href="#services" className="text-muted-foreground hover:text-foreground transition">Services</a>
-          <a href="#realisations" className="text-muted-foreground hover:text-foreground transition">Réalisations</a>
+          <Link href="/projets/" className="text-muted-foreground hover:text-foreground transition">Projets</Link>
           <a href="#about" className="text-muted-foreground hover:text-foreground transition">À propos</a>
           <a href="#dispo" className="text-muted-foreground hover:text-foreground transition">Disponibilités</a>
           <a href="#contact" className="text-muted-foreground hover:text-foreground transition">Contact</a>
@@ -233,37 +233,69 @@ function Services() {
 
 /* ---------- REALISATIONS ---------- */
 function Realisations() {
+  const featured = projects.slice(0, 3);
   return (
     <section id="realisations" className="border-b border-border/60 bg-muted/30 py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
-          eyebrow="Réalisations"
-          title="Plans techniques — Projet Franciuc"
-          desc="Maison unifamiliale, plans complets sur Revit / AutoCAD: implantation, niveaux, coupes, fondations."
+          eyebrow="Projets"
+          title="Une sélection de mon travail"
+          desc="Plans techniques sur Revit & AutoCAD — produits dans le cadre de projets d'études en collaboration."
         />
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p) => (
-            <figure key={p.code} className="group overflow-hidden rounded-xl border border-border bg-card transition hover:shadow-lg">
-              <div className="relative aspect-[4/3] overflow-hidden bg-white">
-                <Image
-                  src={asset(`/portfolio/${p.file}`)}
-                  alt={p.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-contain p-3 transition duration-500 group-hover:scale-[1.03]"
-                />
+
+        <Link
+          href="/projets/projet-franciuc/"
+          className="group mt-12 block overflow-hidden rounded-2xl border border-border bg-card transition hover:border-primary/50 hover:shadow-xl"
+        >
+          <div className="grid md:grid-cols-[1.15fr_1fr]">
+            <div className="grid grid-cols-3 gap-1 bg-white p-2">
+              {featured.map((p) => (
+                <div key={p.code} className="relative aspect-square overflow-hidden rounded-md bg-muted/40">
+                  <Image
+                    src={asset(`/portfolio/${p.file}`)}
+                    alt={p.title}
+                    fill
+                    sizes="(max-width: 768px) 33vw, 20vw"
+                    className="object-contain p-1.5 transition duration-500 group-hover:scale-[1.04]"
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-col justify-between gap-6 p-6 sm:p-8">
+              <div>
+                <Badge variant="secondary" className="mb-3 gap-1.5">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary" />
+                  Projet vedette
+                </Badge>
+                <h3 className="text-2xl font-semibold tracking-tight sm:text-3xl">Projet Franciuc</h3>
+                <p className="mt-1 text-sm text-muted-foreground">Maison unifamiliale · Bosanci</p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                  9 planches A1 — implantation, niveaux, coupes, élévations et plan de fondations.
+                  Détails matériaux complets (cărămidă 9 cm, PUR 12 cm, zidărie 16 cm).
+                </p>
               </div>
-              <figcaption className="flex items-center justify-between border-t border-border/60 px-4 py-3">
-                <span className="text-sm font-medium">{p.title}</span>
-                <span className="font-mono text-xs text-muted-foreground">{p.code}</span>
-              </figcaption>
-            </figure>
-          ))}
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="inline-flex items-center gap-1 text-sm font-medium text-primary">
+                  Voir le projet
+                  <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+                </span>
+                <span className="text-xs text-muted-foreground">9 plans · Revit · AutoCAD</span>
+              </div>
+            </div>
+          </div>
+        </Link>
+
+        <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
+          <p className="max-w-2xl text-sm text-muted-foreground">
+            D&apos;autres projets seront ajoutés au fur et à mesure.
+          </p>
+          <Button asChild variant="outline" size="sm" className="gap-1.5">
+            <Link href="/projets/">
+              Tous les projets
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </Button>
         </div>
-        <p className="mt-8 max-w-2xl text-sm text-muted-foreground">
-          Note : ces plans ont été produits dans le cadre d&apos;un projet d&apos;études en
-          collaboration. Ils illustrent le niveau de détail et les outils utilisés (Revit, AutoCAD).
-        </p>
       </div>
     </section>
   );
