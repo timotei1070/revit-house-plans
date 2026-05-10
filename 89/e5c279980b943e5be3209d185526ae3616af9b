@@ -1,0 +1,27 @@
+package.json
+  s_b8eae813f83524::t_833cf9118cb940 2
+src/app/globals.css
+  s_b8eae813f83524::t_b791bfab5deab0 52-69
+src/app/layout.tsx
+  s_b8eae813f83524::t_68b026dbe01d12 16-32,42,45-47
+src/app/page.tsx
+  s_b8eae813f83524::t_746a9b80a68739 2-75,79-139,141-143,145-163,165-194,196-517
+.gitignore
+  s_b8eae813f83524::t_ac7da7941a5710 39-42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.4",
+  "base_commit_sha": "89e5c279980b943e5be3209d185526ae3616af9b",
+  "prompts": {},
+  "sessions": {
+    "s_b8eae813f83524": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "628b087d-7b0c-4b41-bafa-a5aa87adce87",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "xFlaviews <flaviusmironcatalin@gmail.com>"
+    }
+  }
+}
